@@ -4,6 +4,6 @@ Module = status_notifier_item_plugin
 
 [Documentation]
 Author = Elio E. Duarte
-Version = 0.0.0
+Version = 0.1.0
 Website =  https://github.com/eliostvs/tomate-statusnotifieritem-plugin
 Description = Show session progress on tray icon area

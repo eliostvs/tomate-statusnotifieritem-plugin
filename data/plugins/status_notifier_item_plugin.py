@@ -62,7 +62,7 @@ class StatusNotifierItemPlugin(plugin.Plugin):
     def on_timer_update(self, payload: TimerPayload) -> None:
         logger.debug("action=on-timer-update payload=%s", payload)
 
-        self.change_icon(icon_name(payload.elapsed_percent))
+        self.change_icon(self.icon_name(payload.elapsed_percent))
 
     @on(Events.WINDOW_SHOW)
     def on_window_show(self, **__):
@@ -88,9 +88,9 @@ class StatusNotifierItemPlugin(plugin.Plugin):
         if self.is_activated:
             self.dbus_menu.update_menu(view_is_visible)
 
-
-def icon_name(percent):
-    return "tomate-{:02.0f}".format(percent)
+    @staticmethod
+    def icon_name(percent):
+        return "tomate-{:02.0f}".format(percent)
 
 
 # https://freedesktop.org/wiki/Specifications/StatusNotifierItem/StatusNotifierItem/

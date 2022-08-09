@@ -47,4 +47,5 @@ setup(
     url="https://github.com/eliostvs/tomate-statusnotifieritem-plugin",
     version="0.1.1",
     zip_safe=False,
+    py_modules=[],
 )
